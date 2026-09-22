@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-moh-darkblue: #21469A;
+  --color-moh-blue: #0984F0;
+  --color-moh-cyan: #2EBDF4;
+  --color-moh-sky: #E7F6FC;
+  --color-moh-surface: #F6FBFD;
+  --color-moh-red: #D51517;
+}
+
+html, body {
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+@keyframes buttonWaveSpread {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.12, 1.38);
+    opacity: 0;
+  }
+}
+
+@keyframes buttonWaveSpreadWide {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.22, 1.65);
+    opacity: 0;
+  }
+}
+
+.animate-btn-wave-1 {
+  animation: buttonWaveSpread 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-btn-wave-2 {
+  animation: buttonWaveSpreadWide 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.65s infinite;
+}

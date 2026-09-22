@@ -1,0 +1,7 @@
+{
+  "name": "Cuộc Thi Ảnh Tiêm Chủng Mở Rộng - Bộ Y Tế",
+  "description": "Cổng thông tin và bình chọn trực tuyến Cuộc thi ảnh về Chương trình Tiêm chủng mở rộng - Hành trình tiêm chủng vì một Việt Nam khỏe mạnh do Bộ Y tế và Trung tâm Truyền thông - Giáo dục Sức khỏe TW tổ chức.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
