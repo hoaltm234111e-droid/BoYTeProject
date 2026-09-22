@@ -154,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
 
         {/* Bottom Copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200/70 text-center sm:text-left">
-          <p>© 2024 Cổng thông tin Cuộc thi ảnh Chương trình Tiêm chủng mở rộng - Bộ Y tế.</p>
+          <p>@2026 Bản quyền thuộc về Myaloha.vn</p>
           <p>Thiết kế theo chuẩn nhận diện y tế Việt Nam.</p>
         </div>
       </div>
