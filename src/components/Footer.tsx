@@ -1,6 +1,7 @@
 import React from 'react';
 import { MohLogo } from './MohLogo';
 import { MapPin, Phone, Mail, Globe, ExternalLink } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface FooterProps {
   onOpenRules: () => void;
@@ -15,8 +16,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
   };
 
   return (
-    <footer className="bg-[#21469A] text-white pt-14 pb-8 border-t-4 border-[#0984F0]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+    <footer className="bg-[#21469A] text-white pt-14 pb-8 border-t-4 border-[#0984F0] overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="max-w-[1240px] mx-auto px-4 sm:px-6"
+      >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-blue-400/30">
           
           {/* Organizer Info & Emblem */}
@@ -157,7 +164,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
           <p>@2026 Bản quyền thuộc về Myaloha.vn</p>
           <p>Thiết kế theo chuẩn nhận diện y tế Việt Nam.</p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

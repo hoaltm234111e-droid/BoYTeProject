@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, ArrowRight, ShieldCheck, Award } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface IntroductionSectionProps {
   onOpenRules: () => void;
@@ -7,12 +8,18 @@ interface IntroductionSectionProps {
 
 export const IntroductionSection: React.FC<IntroductionSectionProps> = ({ onOpenRules }) => {
   return (
-    <section id="intro" className="py-16 bg-white border-b border-slate-100">
+    <section id="intro" className="py-16 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Short Text & Button */}
-          <div className="lg:col-span-6 flex flex-col items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6 flex flex-col items-start"
+          >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#E7F6FC] rounded-full text-[#21469A] text-xs font-bold uppercase tracking-wider mb-3">
               <ShieldCheck className="w-3.5 h-3.5 text-[#0984F0]" />
               <span>Ý NGHĨA & MỤC ĐÍCH</span>
@@ -55,10 +62,16 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({ onOpen
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Image Collage */}
-          <div className="lg:col-span-6">
+          <motion.div
+            initial={{ opacity: 0, x: 35 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6"
+          >
             <div className="grid grid-cols-2 gap-3 sm:gap-4 relative">
               {/* Image 1 - Large Primary */}
               <div className="col-span-2 overflow-hidden rounded-2xl shadow-sm border border-slate-200">
@@ -90,7 +103,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({ onOpen
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, ArrowRight, Calendar } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface CountdownSectionProps {
   onSubmitClick?: () => void;
@@ -48,15 +49,32 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
 
   return (
     <section className="py-14 sm:py-16 md:py-20 bg-[#EEF6FA] relative overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
-        
+      <motion.div
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        className="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col items-center text-center"
+      >
         {/* Section Title */}
-        <h2 className="text-[#21469A] font-bold text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-6 sm:mb-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-[#21469A] font-bold text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-6 sm:mb-8"
+        >
           CUỘC THI KẾT THÚC TRONG
-        </h2>
+        </motion.h2>
 
         {/* Large Numbers Countdown Display: 12 : 12 : 00 : 49 */}
-        <div className="flex items-center justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-10 my-2">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          className="flex items-center justify-center gap-2 sm:gap-6 md:gap-8 lg:gap-10 my-2"
+        >
           {/* Days */}
           <div className="flex flex-col items-center">
             <span className="text-5xl sm:text-7xl md:text-8xl lg:text-[96px] font-extrabold text-[#3B82F6] leading-none tabular-nums tracking-tight">
@@ -102,10 +120,16 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
               Giây
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Red CTA Pill Button: NỘP SẢN PHẨM DỰ THI with Wave Ripple Effect */}
-        <div className="mt-8 sm:mt-10 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, delay: 0.25 }}
+          className="mt-8 sm:mt-10 flex justify-center"
+        >
           <div className="relative inline-flex items-center justify-center group">
             {/* Outer radiating wave 2 */}
             <span
@@ -130,16 +154,22 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
               <ArrowRight className="w-4 h-4 stroke-[2.5] shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Small date range below */}
-        <div className="mt-5 flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-600">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-5 flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-600"
+        >
           <Calendar className="w-4 h-4 text-[#2E79F4] shrink-0" />
           <span>
             Thời gian nhận tác phẩm: <strong className="font-bold text-[#1E3A8A]">15/11/2026 - 30/11/2026</strong>
           </span>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

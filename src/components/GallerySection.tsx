@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Artwork, CategoryType } from '../types';
 import { Search, Heart, Share2, Eye, SlidersHorizontal, Check } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface GallerySectionProps {
   artworks: Artwork[];
@@ -49,11 +50,17 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   }, [artworks, currentTab, searchQuery, sortBy]);
 
   return (
-    <section id="gallery" className="py-16 bg-[#F6FBFD] border-b border-slate-200/80">
+    <section id="gallery" className="py-16 bg-[#F6FBFD] border-b border-slate-200/80 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-10"
+        >
           <div className="inline-block px-3.5 py-1 rounded-full bg-[#E7F6FC] text-[#0984F0] text-xs font-bold uppercase tracking-wider mb-2">
             VÒNG BÌNH CHỌN TRỰC TUYẾN
           </div>
@@ -64,10 +71,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
           <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
             Mỗi lượt bình chọn của quý vị là nguồn cổ vũ to lớn cho các tác giả và tôn vinh những cống hiến thầm lặng của đội ngũ y tế.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter Bar: Tabs on left, Search & Sort on right */}
-        <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/90 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/90 mb-8 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
           {/* Category Tabs: Tất cả / Ảnh đơn / Ảnh bộ */}
           <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl w-full md:w-auto">
             <button
@@ -130,7 +143,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               </select>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Gallery Grid */}
         {filteredArtworks.length === 0 ? (
@@ -145,12 +158,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-            {filteredArtworks.map((artwork) => {
+            {filteredArtworks.map((artwork, index) => {
               const hasVoted = votedIds.has(artwork.id);
               return (
-                <div
+                <motion.div
                   key={artwork.id}
                   id={`artwork-card-${artwork.code}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.12 }}
+                  transition={{ duration: 0.5, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col"
                 >
                   {/* Image container */}
@@ -249,7 +266,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

@@ -1,14 +1,21 @@
 import React from 'react';
 import { PRIZE_DATA } from '../data/contestData';
 import { Trophy, Award, Gift } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export const PrizesSection: React.FC = () => {
   return (
-    <section id="prizes" className="py-16 bg-[#F6FBFD] border-b border-slate-200/80">
+    <section id="prizes" className="py-16 bg-[#F6FBFD] border-b border-slate-200/80 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-12"
+        >
           <div className="inline-block px-3.5 py-1 rounded-full bg-[#E7F6FC] text-[#0984F0] text-xs font-bold uppercase tracking-wider mb-2">
             DANH MỤC KHEN THƯỞNG CHÍNH THỨC
           </div>
@@ -19,15 +26,19 @@ export const PrizesSection: React.FC = () => {
           <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
             Tổng giá trị giải thưởng tiền mặt và hiện vật lên đến hơn 150 triệu đồng cùng Bằng khen danh dự của Bộ Y tế.
           </p>
-        </div>
+        </motion.div>
 
         {/* Prizes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PRIZE_DATA.map((prize) => {
+          {PRIZE_DATA.map((prize, index) => {
             return (
-              <div
+              <motion.div
                 key={prize.id}
                 id={`prize-card-${prize.id}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className={`rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between border ${
                   prize.isSpecial
                     ? 'bg-gradient-to-b from-white to-amber-50/40 border-amber-300 shadow-md ring-2 ring-amber-400/20'
@@ -82,7 +93,7 @@ export const PrizesSection: React.FC = () => {
                     </span>
                   </div>
                 )}
-              </div>
+              </motion.div>
             );
           })}
         </div>

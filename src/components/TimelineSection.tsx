@@ -1,14 +1,21 @@
 import React from 'react';
 import { TIMELINE_DATA } from '../data/contestData';
 import { CheckCircle2, Clock, CalendarDays } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export const TimelineSection: React.FC = () => {
   return (
-    <section id="timeline" className="py-16 bg-white border-b border-slate-100">
+    <section id="timeline" className="py-16 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-12"
+        >
           <div className="inline-block px-3.5 py-1 rounded-full bg-[#E7F6FC] text-[#0984F0] text-xs font-bold uppercase tracking-wider mb-2">
             LỘ TRÌNH TỔ CHỨC
           </div>
@@ -19,7 +26,7 @@ export const TimelineSection: React.FC = () => {
           <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
             Các mốc thời gian chính thức của cuộc thi ảnh từ phát động đến lễ tổng kết và trao giải thưởng.
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline Grid / Pipeline */}
         <div className="relative">
@@ -32,9 +39,13 @@ export const TimelineSection: React.FC = () => {
               const isActive = step.status === 'active';
 
               return (
-                <div
+                <motion.div
                   key={step.id}
                   id={`timeline-step-${step.id}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className={`rounded-2xl p-5 border transition-all flex flex-col justify-between ${
                     isActive
                       ? 'bg-gradient-to-b from-[#E7F6FC] to-white border-[#0984F0] shadow-md ring-2 ring-[#0984F0]/20'
@@ -91,7 +102,7 @@ export const TimelineSection: React.FC = () => {
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
