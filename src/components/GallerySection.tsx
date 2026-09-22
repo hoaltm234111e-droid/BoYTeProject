@@ -240,9 +240,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       </button>
 
                       <button
-                        onClick={() => onShare(artwork)}
+                        type="button"
                         id={`btn-share-${artwork.code}`}
-                        className="w-full py-2.5 px-3 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-[#21469A] hover:border-slate-300 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                        className="w-full py-2.5 px-3 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 flex items-center justify-center gap-1.5 cursor-default select-none"
                       >
                         <Share2 className="w-3.5 h-3.5" />
                         <span>Chia sẻ</span>

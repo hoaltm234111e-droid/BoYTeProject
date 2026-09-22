@@ -11,17 +11,16 @@ import { PrizesSection } from './components/PrizesSection';
 import { TimelineSection } from './components/TimelineSection';
 import { Footer } from './components/Footer';
 import { SubmissionPage } from './components/SubmissionPage';
-import { Toast, LoginModal, PreviewModal, RulesModal } from './components/Modals';
+import { Toast, PreviewModal, RulesModal } from './components/Modals';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'submit'>('home');
   const [artworks, setArtworks] = useState<Artwork[]>(ARTWORKS_DATA);
   const [votedIds, setVotedIds] = useState<Set<string>>(new Set(['1'])); // initial simulated vote
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
   const [previewArtwork, setPreviewArtwork] = useState<Artwork | null>(null);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  const [userName, setUserName] = useState<string>('Nguyễn Văn A');
+  const [userLoggedIn] = useState(false);
+  const [userName] = useState<string>('Nguyễn Văn A');
 
   // Toast state
   const [toastMsg, setToastMsg] = useState('');
@@ -57,23 +56,8 @@ export default function App() {
     showToast(`Bình chọn thành công cho tác phẩm ${artwork.code}: "${artwork.title}"`);
   };
 
-  const handleShare = (artwork: Artwork) => {
-    const url = window.location.href.split('#')[0] + `#artwork-${artwork.code}`;
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(url).then(() => {
-        showToast(`Đã sao chép liên kết chia sẻ cho tác phẩm ${artwork.code}!`);
-      }).catch(() => {
-        showToast(`Liên kết tác phẩm: ${artwork.code}`);
-      });
-    } else {
-      showToast(`Liên kết tác phẩm: ${artwork.code}`);
-    }
-  };
-
-  const handleLoginSuccess = (name: string) => {
-    setUserLoggedIn(true);
-    setUserName(name);
-    showToast(`Đăng nhập thành công! Xin chào ${name}`);
+  const handleShare = () => {
+    // Nút tĩnh, không hiện thông báo
   };
 
   return (
@@ -85,7 +69,7 @@ export default function App() {
           setCurrentPage(page);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
-        onLoginClick={() => setIsLoginOpen(true)}
+        onLoginClick={() => {}}
         onOpenRules={() => setIsRulesOpen(true)}
         userLoggedIn={userLoggedIn}
         userName={userName}
@@ -142,12 +126,6 @@ export default function App() {
       <Footer onOpenRules={() => setIsRulesOpen(true)} />
 
       {/* Modals & Floating Components */}
-      <LoginModal
-        isOpen={isLoginOpen}
-        onClose={() => setIsLoginOpen(false)}
-        onLoginSuccess={handleLoginSuccess}
-      />
-
       <PreviewModal
         artwork={previewArtwork}
         onClose={() => setPreviewArtwork(null)}

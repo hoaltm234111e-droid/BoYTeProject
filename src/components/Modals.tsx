@@ -271,8 +271,8 @@ export const PreviewModal: React.FC<PreviewModalProps> = ({
 
           <div className="flex items-center gap-3">
             <button
-              onClick={() => onShare(artwork)}
-              className="px-4 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-xs hover:bg-slate-100 flex items-center gap-1.5 transition-colors cursor-pointer"
+              type="button"
+              className="px-4 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 cursor-default select-none"
             >
               <Share2 className="w-4 h-4" />
               <span>Chia sẻ</span>
