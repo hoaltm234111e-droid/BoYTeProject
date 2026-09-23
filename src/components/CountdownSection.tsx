@@ -48,7 +48,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
   };
 
   return (
-    <section className="py-14 sm:py-16 md:py-20 bg-[#EEF6FA] relative overflow-hidden">
+    <section className="py-8 sm:py-10 md:py-12 bg-[#EEF6FA] relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -181,42 +181,42 @@ export const TIMELINE_DATA: TimelineStep[] = [
     id: 1,
     title: 'GĐ 1: Chuẩn bị & Phát động',
     date: 'Tháng 6 - 8/2026',
-    description: 'Ban hành Kế hoạch, Thể lệ; lập Ban Tổ chức, BGK, Tổ Thư ký; thiết lập cổng trực tuyến và tổ chức Lễ phát động.',
+    description: 'Ban hành Kế hoạch, Thể lệ',
     status: 'completed'
   },
   {
     id: 2,
     title: 'GĐ 2: Tiếp nhận hồ sơ',
     date: 'Từ phát động - 15/10/2026',
-    description: 'Tiếp nhận sản phẩm dự thi trực tuyến qua cổng Cuocthitiemchung2026.org; sàng lọc kỹ thuật và rà soát tính hợp lệ.',
+    description: 'Tiếp nhận sản phẩm dự thi trực tuyến qua cổng Cuocthitiemchung2026.org',
     status: 'active'
   },
   {
     id: 3,
     title: 'GĐ 3: Chấm Sơ khảo',
     date: 'Tháng 10/2026',
-    description: 'Hội đồng Giám khảo chấm sơ khảo, lựa chọn ra 100 tác phẩm xuất sắc nhất (gồm 50 ảnh đơn và 50 chùm ảnh).',
+    description: 'Hội đồng Giám khảo chấm sơ khảo, lựa chọn ra 100 tác phẩm xuất sắc nhất',
     status: 'upcoming'
   },
   {
     id: 4,
     title: 'GĐ 3: Bình chọn trực tuyến',
     date: 'Tháng 10 - 11/2026',
-    description: 'Mở cổng bình chọn trực tuyến công khai cho 100 tác phẩm vào Vòng Sơ khảo; rà soát chống gian lận tương tác.',
+    description: 'Mở cổng bình chọn trực tuyến công khai cho 100 tác phẩm vào Vòng Sơ khảo',
     status: 'upcoming'
   },
   {
     id: 5,
     title: 'GĐ 3: Chấm Chung khảo',
     date: 'Tháng 11/2026',
-    description: 'Hội đồng Giám khảo chấm độc lập 100 tác phẩm (Tổng điểm = 80% chuyên môn + 20% điểm bình chọn trực tuyến).',
+    description: 'Hội đồng Giám khảo chấm độc lập 100 tác phẩm',
     status: 'upcoming'
   },
   {
     id: 6,
     title: 'GĐ 4: Tổng kết & Trao giải',
     date: 'Tháng 11 - 12/2026',
-    description: 'Tổ chức Lễ Tổng kết, công bố và trao giải thưởng; lưu trữ tư liệu phục vụ truyền thông - giáo dục sức khỏe.',
+    description: 'Tổ chức Lễ Tổng kết, công bố và trao giải thưởng',
     status: 'upcoming'
   }
 ];
