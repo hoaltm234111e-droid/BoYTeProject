@@ -32,21 +32,21 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({ onOpen
 
             <div className="space-y-4 text-slate-600 text-sm sm:text-[15px] leading-relaxed">
               <p>
-                Chương trình Tiêm chủng mở rộng (TCMR) tại Việt Nam được triển khai từ năm 1981 với sự hỗ trợ của Tổ chức Y tế Thế giới (WHO) và Quỹ Nhi đồng Liên Hợp Quốc (UNICEF). Trải qua hơn 40 năm đồng hành cùng sự nghiệp bảo vệ sức khỏe nhân dân, chương trình đã thanh toán bệnh bại liệt, loại trừ uốn ván sơ sinh và giảm mạnh hàng chục căn bệnh truyền nhiễm nguy hiểm ở trẻ em.
+                Căn cứ Kế hoạch số 414/KH-GDSKTW ngày 29/06/2026 của Trung tâm Truyền thông - Giáo dục sức khỏe Trung ương (Bộ Y tế), Cuộc thi ảnh về Chương trình Tiêm chủng mở rộng: <strong>“Hành trình tiêm chủng – Vì một Việt Nam khỏe mạnh”</strong> với khẩu hiệu <em>“Lá chắn bảo vệ con bạn và cộng đồng”</em> được tổ chức trên phạm vi toàn quốc từ tháng 6 đến tháng 12 năm 2026.
               </p>
               <p>
-                Cuộc thi ảnh “Hành trình tiêm chủng - Vì một Việt Nam khỏe mạnh” do Bộ Y tế phối hợp cùng Trung tâm Truyền thông - Giáo dục Sức khỏe Trung ương (T5G) tổ chức nhằm ghi lại những khoảnh khắc chân thực, giàu cảm xúc về nỗ lực tận tụy của các chiến sĩ áo trắng tại các trạm y tế xã phường, bản làng vùng cao và hải đảo xa xôi.
+                Cuộc thi nhằm phổ biến sâu rộng chủ trương của Đảng, chính sách pháp luật của Nhà nước và ngành Y tế về tiêm chủng mở rộng; khẳng định tiêm chủng là biện pháp dự phòng chủ động, an toàn, bền vững để bảo vệ con trẻ và cộng đồng. Đồng thời, biểu dương và tôn vinh những khoảnh khắc chân thực, nhân văn, người thật - việc thật cùng sự cống hiến thầm lặng của đội ngũ cán bộ y tế cơ sở trên mọi nẻo đường Tổ quốc.
               </p>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3.5 py-2 rounded-xl">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3 py-2 rounded-xl">
                 <Award className="w-4 h-4 text-[#0984F0]" />
                 <span>Quy mô toàn quốc</span>
               </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3.5 py-2 rounded-xl">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3 py-2 rounded-xl">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Bảo trợ chuyên môn Bộ Y tế</span>
+                <span>Kế hoạch 414/KH-GDSKTW - Bộ Y tế</span>
               </div>
             </div>
 

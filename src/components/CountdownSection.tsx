@@ -64,7 +64,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-[#21469A] font-bold text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-6 sm:mb-8"
         >
-          CUỘC THI KẾT THÚC TRONG
+          HẠN CHÓT TIẾP NHẬN TÁC PHẨM DỰ THI KẾT THÚC TRONG
         </motion.h2>
 
         {/* Large Numbers Countdown Display: 12 : 12 : 00 : 49 */}
@@ -162,12 +162,14 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.35 }}
-          className="mt-5 flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-600"
+          className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm text-slate-600"
         >
-          <Calendar className="w-4 h-4 text-[#2E79F4] shrink-0" />
-          <span>
-            Thời gian nhận tác phẩm: <strong className="font-bold text-[#1E3A8A]">15/11/2026 - 30/11/2026</strong>
-          </span>
+          <div className="flex items-center gap-1.5">
+            <Calendar className="w-4 h-4 text-[#2E79F4] shrink-0" />
+            <span>
+              Thời gian tiếp nhận tác phẩm: <strong className="font-bold text-[#1E3A8A]">Từ ngày phát động đến hết ngày 15/10/2026</strong>
+            </span>
+          </div>
         </motion.div>
       </motion.div>
     </section>

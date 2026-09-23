@@ -23,8 +23,8 @@ export const TimelineSection: React.FC = () => {
             TIMELINE CUỘC THI
           </h2>
           <div className="w-20 h-1 bg-[#0984F0] mx-auto mt-2.5 rounded-full"></div>
-          <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
-            Các mốc thời gian chính thức của cuộc thi ảnh từ phát động đến lễ tổng kết và trao giải thưởng.
+          <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
+            Lộ trình triển khai 04 giai đoạn chính thức theo Kế hoạch số 414/KH-GDSKTW của Trung tâm Truyền thông - Giáo dục sức khỏe TW (Bộ Y tế).
           </p>
         </motion.div>
 

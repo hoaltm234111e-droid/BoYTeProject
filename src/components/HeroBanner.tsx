@@ -71,7 +71,7 @@ export const HeroBanner: React.FC = () => {
 
                 <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[#0984F0] bg-[#E7F6FC] px-3 py-1.5 rounded-full">
                   <Sparkles className="w-3.5 h-3.5 text-[#0984F0]" />
-                  <span>40 Năm Bền Bỉ</span>
+                  <span>Vì Một Việt Nam Khỏe Mạnh</span>
                 </div>
               </div>
             </div>
@@ -97,8 +97,14 @@ export const HeroBanner: React.FC = () => {
               “HÀNH TRÌNH TIÊM CHỦNG - VÌ MỘT VIỆT NAM KHỎE MẠNH”
             </h2>
 
+            {/* Official Slogan */}
+            <div className="mt-2 inline-flex items-center gap-1.5 px-3.5 py-1 bg-amber-50 border border-amber-200/80 rounded-full text-amber-800 text-xs sm:text-sm font-bold">
+              <span>Khẩu hiệu:</span>
+              <span className="text-[#D51517]">“Lá chắn bảo vệ con bạn và cộng đồng”</span>
+            </div>
+
             {/* Date & Location Line */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm md:text-base text-slate-600 font-medium bg-white/90 border border-slate-200/80 px-6 py-2.5 rounded-full shadow-xs">
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm md:text-base text-slate-600 font-medium bg-white/90 border border-slate-200/80 px-6 py-2.5 rounded-full shadow-xs">
               <div className="flex items-center gap-1.5 text-slate-700">
                 <MapPin className="w-4 h-4 text-[#D51517]" />
                 <span className="font-semibold">Hà Nội</span>
@@ -106,13 +112,17 @@ export const HeroBanner: React.FC = () => {
               <span className="w-1 h-1 rounded-full bg-slate-300"></span>
               <div className="flex items-center gap-1.5 text-slate-700">
                 <Calendar className="w-4 h-4 text-[#0984F0]" />
-                <span>Năm 2024</span>
+                <span>Năm 2026</span>
+              </div>
+              <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+              <div className="text-slate-500 font-medium text-xs sm:text-sm">
+                Kế hoạch số 414/KH-GDSKTW
               </div>
             </div>
 
             {/* Quick summary line */}
             <p className="mt-5 text-slate-600 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed">
-              Tôn vinh những khoảnh khắc xúc động, nỗ lực tận tụy của cán bộ y tế và sự đồng hành của nhân dân trên khắp mọi miền Tổ quốc.
+              Tôn vinh những khoảnh khắc nhân văn, chân thực, người thật việc thật và sự tận tụy của cán bộ y tế cơ sở trên khắp mọi miền Tổ quốc.
             </p>
           </motion.div>
 

@@ -338,14 +338,22 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
 
         {/* Rules Content */}
         <div className="overflow-y-auto p-6 space-y-6 text-slate-700 text-sm leading-relaxed">
+          <div className="bg-sky-50 border border-sky-200 p-3.5 rounded-xl text-xs text-[#21469A]">
+            <p className="font-bold uppercase mb-1">Căn cứ pháp lý & Ban hành:</p>
+            <p>Kế hoạch số 414/KH-GDSKTW ngày 29/06/2026 của Trung tâm Truyền thông - Giáo dục sức khỏe Trung ương (Bộ Y tế) về tổ chức Chương trình truyền thông về Tiêm chủng mở rộng năm 2026.</p>
+          </div>
+
           <section>
             <h4 className="font-bold text-[#21469A] text-base mb-2 uppercase flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
               1. Mục đích và ý nghĩa
             </h4>
-            <p>
-              Kỷ niệm 40 năm triển khai Chương trình Tiêm chủng mở rộng tại Việt Nam; tôn vinh những cống hiến thầm lặng của đội ngũ y tế dự phòng và y tế cơ sở; nâng cao nhận thức cộng đồng về tầm quan trọng của việc tiêm chủng đầy đủ, đúng lịch vì một Việt Nam khỏe mạnh.
-            </p>
+            <ul className="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li>Phổ biến chủ trương của Đảng, chính sách pháp luật của Nhà nước và định hướng ngành Y tế về tiêm chủng mở rộng; khẳng định tiêm chủng là biện pháp dự phòng chủ động, hiệu quả, tiết kiệm và bền vững bảo vệ con trẻ và cộng đồng.</li>
+              <li>Cung cấp thông tin chính xác, khoa học, dễ hiểu về lợi ích của vắc xin, lịch tiêm chủng; hạn chế thông tin sai lệch, củng cố niềm tin của nhân dân.</li>
+              <li>Tôn vinh những khoảnh khắc nhân văn, chân thực, người thật - việc thật; biểu dương các tập thể, cá nhân và y bác sĩ cơ sở tận tụy trên khắp mọi miền Tổ quốc.</li>
+              <li><strong>Khẩu hiệu chính thức:</strong> <span className="font-bold text-[#D51517]">“Lá chắn bảo vệ con bạn và cộng đồng”</span>.</li>
+            </ul>
           </section>
 
           <section>
@@ -353,32 +361,61 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
               <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
               2. Đối tượng tham gia
             </h4>
-            <p>
-              Tất cả công dân Việt Nam từ 18 tuổi trở lên, bao gồm các nhà nhiếp ảnh chuyên nghiệp và không chuyên, cán bộ y tế, phóng viên, nhà báo và người dân trên toàn quốc.
-            </p>
-          </section>
-
-          <section>
-            <h4 className="font-bold text-[#21469A] text-base mb-2 uppercase flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
-              3. Quy cách tác phẩm dự thi
-            </h4>
             <ul className="list-disc pl-5 space-y-1.5 text-slate-600">
-              <li><strong>Ảnh đơn:</strong> Mỗi tác phẩm là 01 file ảnh hoàn chỉnh.</li>
-              <li><strong>Ảnh bộ:</strong> Từ 05 đến 08 ảnh, kèm chú thích nội dung và lời tựa cho từng ảnh.</li>
-              <li>Ảnh định dạng JPG/JPEG, độ phân giải tối thiểu 300 DPI, dung lượng từ 3MB đến 12MB.</li>
-              <li>Ảnh chụp thực tế, không chắp ghép làm sai lệch sự thật lịch sử, y khoa. Chấp nhận xử lý hậu kỳ cơ bản (ánh sáng, độ tương phản).</li>
+              <li>Công dân Việt Nam đang sinh sống, làm việc trong và ngoài nước; người nước ngoài đang sinh sống và làm việc hợp pháp tại Việt Nam.</li>
+              <li>Khuyến khích các nhà nhiếp ảnh chuyên nghiệp và không chuyên; phóng viên ảnh, biên tập viên các cơ quan báo chí truyền thông; đặc biệt là cán bộ, nhân viên y tế, giáo viên, học sinh, sinh viên trên toàn quốc.</li>
+              <li><em>Lưu ý: Thành viên Ban Tổ chức, Ban Giám khảo và Tổ Thư ký không được tham gia dự thi.</em></li>
             </ul>
           </section>
 
           <section>
             <h4 className="font-bold text-[#21469A] text-base mb-2 uppercase flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
-              4. Phương thức chấm giải & Bình chọn
+              3. Quy cách tác phẩm & Yêu cầu kỹ thuật
             </h4>
-            <p>
-              Điểm số cuối cùng được tính dựa trên 80% đánh giá chuyên môn của Hội đồng Giám khảo (do Bộ Y tế thành lập) và 20% điểm số bình chọn công khai từ cộng đồng trên Cổng bình chọn trực tuyến chính thức.
-            </p>
+            <ul className="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>Ảnh đơn:</strong> 01 ảnh kèm theo tiêu đề và chú thích rõ ràng.</li>
+              <li><strong>Ảnh bộ (Phóng sự ảnh/Chùm ảnh):</strong> Mỗi bộ gồm từ 05 đến 08 bức ảnh, có tính logic, mạch lạc về câu chuyện, kèm tiêu đề và chú thích đánh số thứ tự từ 1 đến 8.</li>
+              <li><strong>Thông số kỹ thuật:</strong> Định dạng file JPG hoặc PNG; độ phân giải tối thiểu <strong>300 DPI</strong>; dung lượng tối thiểu <strong>3 MB</strong>; chiều cạnh ngắn nhất tối thiểu <strong>2.000 pixel</strong> (phục vụ in ấn, triển lãm khổ lớn).</li>
+              <li>Ảnh chụp thực tế, phản ánh trung thực bối cảnh, sự việc, con người liên quan đến tiêm chủng mở rộng. Chấp nhận xử lý hậu kỳ cơ bản (ánh sáng, tương phản) nhưng không làm sai lệch thực tế.</li>
+              <li><strong className="text-red-600 uppercase">Quy định nghiêm ngặt:</strong> Ban Tổ chức tuyệt đối không chấp nhận các sản phẩm ảnh được tạo ra bằng trí tuệ nhân tạo (AI).</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4 className="font-bold text-[#21469A] text-base mb-2 uppercase flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
+              4. Tiến độ và Phương thức chấm giải
+            </h4>
+            <ul className="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>Thời gian tiếp nhận:</strong> Từ ngày phát động đến hết ngày <strong>15/10/2026</strong>.</li>
+              <li><strong>Vòng Sơ khảo:</strong> Hội đồng Giám khảo chấm và chọn ra 100 tác phẩm xuất sắc nhất (50 ảnh đơn và 50 chùm ảnh).</li>
+              <li><strong>Vòng Bình chọn trực tuyến:</strong> Mở cổng bình chọn công khai cho 100 tác phẩm vượt qua Vòng Sơ khảo.</li>
+              <li><strong>Vòng Chung khảo:</strong> Hội đồng Giám khảo chấm điểm độc lập. Xếp hạng dựa trên: <strong>80%</strong> điểm chuyên môn + <strong>20%</strong> điểm bình chọn trực tuyến.</li>
+              <li><strong>Tổng kết & Trao giải:</strong> Tháng 11 - 12/2026 tại Hà Nội.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4 className="font-bold text-[#21469A] text-base mb-2 uppercase flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#0984F0]"></span>
+              5. Cơ cấu giải thưởng (VI. CƠ CẤU GIẢI THƯỞNG)
+            </h4>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2 text-slate-700">
+              <p className="font-semibold text-[#21469A]">Áp dụng cho mỗi loại hình (Ảnh đơn & Ảnh bộ):</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li><strong>01 Giải Nhất:</strong> 10.000.000 đ</li>
+                <li><strong>03 Giải Nhì:</strong> 7.000.000 đ/giải</li>
+                <li><strong>05 Giải Ba:</strong> 5.000.000 đ/giải</li>
+                <li><strong>07 Giải Khuyến khích:</strong> 3.000.000 đ/giải</li>
+                <li><strong>09 Giải Chuyên đề:</strong> 1.500.000 đ/giải</li>
+              </ul>
+              <div className="pt-2 border-t border-slate-200 text-slate-600 space-y-1">
+                <p><strong>Lưu ý:</strong></p>
+                <p>- Tiêu chí cụ thể của các Giải Chuyên đề sẽ do Ban Giám khảo thống nhất và quyết định dựa trên chất lượng thực tế của các sản phẩm dự thi.</p>
+                <p>- Kèm theo tiền thưởng, các tác giả/nhóm đoạt giải được nhận Giấy chứng nhận và Cúp/Kỷ niệm chương của BTC. Tiền thưởng phải chịu thuế Thu nhập cá nhân theo quy định.</p>
+              </div>
+            </div>
           </section>
         </div>
 
@@ -539,7 +576,7 @@ export const SubmissionModal: React.FC<SubmissionModalProps> = ({
           {/* File Upload Area */}
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Tải lên file ảnh dự thi (JPG, JPEG, PNG - Tối đa 15MB) <span className="text-red-500">*</span>
+              Tải lên file ảnh dự thi (JPG, PNG - Dung lượng tối thiểu 3MB, tối đa 20MB) <span className="text-red-500">*</span>
             </label>
             <div
               onDragOver={(e) => e.preventDefault()}
@@ -548,7 +585,7 @@ export const SubmissionModal: React.FC<SubmissionModalProps> = ({
             >
               <input
                 type="file"
-                accept="image/*"
+                accept="image/jpeg,image/png"
                 onChange={handleFileChange}
                 className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
               />
@@ -565,7 +602,7 @@ export const SubmissionModal: React.FC<SubmissionModalProps> = ({
                       Kéo thả ảnh vào đây hoặc nhấp để chọn tệp
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Độ phân giải tối thiểu 300 DPI, chấp nhận ảnh đơn hoặc nén zip bộ ảnh
+                      Định dạng JPG/PNG, tối thiểu 300 DPI, cạnh ngắn tối thiểu 2.000px. Không chấp nhận ảnh AI.
                     </p>
                   </>
                 )}
@@ -596,7 +633,7 @@ export const SubmissionModal: React.FC<SubmissionModalProps> = ({
               required
             />
             <label htmlFor="copyright-terms" className="text-xs text-slate-600 leading-tight">
-              Tôi cam kết tác phẩm thuộc quyền sở hữu của tôi, không vi phạm bản quyền và tuân thủ đúng thể lệ do Bộ Y tế ban hành.
+              Tôi cam kết tác phẩm là ảnh chụp thực tế (người thật, việc thật), hoàn toàn không được tạo ra bằng trí tuệ nhân tạo (AI), không vi phạm bản quyền và tuân thủ đúng Kế hoạch số 414/KH-GDSKTW do Bộ Y tế ban hành.
             </label>
           </div>
 

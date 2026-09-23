@@ -181,8 +181,8 @@ export const SubmissionPage: React.FC<SubmissionPageProps> = ({
       if (!product.publishedUrl.trim()) {
         newErrors.publishedUrl = 'Vui lòng cung cấp đường link sản phẩm đã đăng tải';
       }
-      if (product.useAI === 'yes' && !product.aiDescription.trim()) {
-        newErrors.aiDescription = 'Vui lòng mô tả cụ thể công cụ AI và phạm vi sử dụng';
+      if (product.useAI === 'yes') {
+        newErrors.useAI = 'Theo Mục 1.5 Kế hoạch số 414/KH-GDSKTW, Ban Tổ chức không chấp nhận các sản phẩm ảnh được tạo ra bằng trí tuệ nhân tạo (AI). Tác phẩm phải là ảnh chụp thực tế người thật, việc thật.';
       }
       if (product.blurSensitiveInfo === 'yes' && !product.blurExplanation.trim()) {
         newErrors.blurExplanation = 'Vui lòng giải thích lý do che/mờ thông tin';
@@ -967,13 +967,13 @@ export const SubmissionPage: React.FC<SubmissionPageProps> = ({
                 </div>
               </div>
 
-              {/* Có sử dụng công cụ AI trong quá trình xử lý? Có / Không */}
+              {/* Cam kết không tạo bằng AI (Quy định bắt buộc theo Kế hoạch 414) */}
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-[#0984F0]" />
                     <span className="text-xs font-bold text-slate-800">
-                      Có sử dụng công cụ AI trong quá trình xử lý ảnh?
+                      Tác phẩm có được tạo ra bằng trí tuệ nhân tạo (AI) không?
                     </span>
                   </div>
                   <div className="flex items-center gap-4 text-xs font-semibold">
@@ -985,7 +985,7 @@ export const SubmissionPage: React.FC<SubmissionPageProps> = ({
                         onChange={() => setProduct({ ...product, useAI: 'no', aiDescription: '' })}
                         className="text-[#21469A]"
                       />
-                      <span>Không</span>
+                      <span className="text-emerald-700">Không (Ảnh chụp thực tế)</span>
                     </label>
                     <label className="flex items-center gap-1.5 cursor-pointer">
                       <input
@@ -995,29 +995,26 @@ export const SubmissionPage: React.FC<SubmissionPageProps> = ({
                         onChange={() => setProduct({ ...product, useAI: 'yes' })}
                         className="text-[#21469A]"
                       />
-                      <span>Có</span>
+                      <span className="text-red-600">Có (Tạo bằng AI)</span>
                     </label>
                   </div>
                 </div>
 
-                {product.useAI === 'yes' && (
-                  <div className="pt-2 animate-in fade-in duration-200">
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Mô tả công cụ và phạm vi sử dụng AI (VD: khử nhiễu, nâng nét cơ bản...) <span className="text-red-500">*</span>
-                    </label>
-                    <textarea
-                      rows={2}
-                      value={product.aiDescription}
-                      onChange={(e) => setProduct({ ...product, aiDescription: e.target.value })}
-                      placeholder="Nêu rõ phần mềm/công cụ AI đã dùng và cam kết không tạo sinh chi tiết giả mạo sự thật y tế..."
-                      className={`w-full px-3.5 py-2 text-xs bg-white border rounded-xl focus:outline-hidden ${
-                        errors.aiDescription ? 'border-red-500' : 'border-slate-300 focus:border-[#0984F0]'
-                      }`}
-                    />
-                    {errors.aiDescription && (
-                      <p className="mt-1 text-xs text-red-500">{errors.aiDescription}</p>
+                {product.useAI === 'yes' ? (
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 space-y-1 animate-in fade-in duration-200">
+                    <p className="font-bold flex items-center gap-1.5">
+                      <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+                      Quy định nghiêm ngặt của Ban Tổ chức:
+                    </p>
+                    <p>Theo Mục 1.5 Kế hoạch số 414/KH-GDSKTW, Ban Tổ chức <strong>không chấp nhận</strong> các sản phẩm ảnh được tạo ra bằng trí tuệ nhân tạo (AI). Tác phẩm phải là ảnh chụp thực tế người thật, việc thật để bảo đảm tính trung thực.</p>
+                    {errors.useAI && (
+                      <p className="font-semibold text-red-800 pt-1">{errors.useAI}</p>
                     )}
                   </div>
+                ) : (
+                  <p className="text-[11px] text-slate-500">
+                    Tác phẩm hợp lệ: Ảnh chụp thực tế phản ánh trung thực bối cảnh, sự việc, con người liên quan đến hoạt động tiêm chủng mở rộng.
+                  </p>
                 )}
               </div>
 
@@ -1458,7 +1455,7 @@ export const SubmissionPage: React.FC<SubmissionPageProps> = ({
                   className="mt-0.5 rounded-sm text-[#21469A] focus:ring-[#0984F0] w-4 h-4"
                 />
                 <span className="text-xs text-slate-700 leading-relaxed font-medium">
-                  <strong>Đã đọc và đồng ý với Thể lệ cuộc thi:</strong> Tôi hiểu và tuân thủ các quy chế, phương thức chấm giải do Ban Tổ chức và Bộ Y tế ban hành.
+                  <strong>Đã đọc và đồng ý với Thể lệ cuộc thi:</strong> Tôi hiểu và tuân thủ các quy chế, yêu cầu kỹ thuật và phương thức chấm giải theo Kế hoạch số 414/KH-GDSKTW do Bộ Y tế ban hành.
                 </span>
               </label>
 

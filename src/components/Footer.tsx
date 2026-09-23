@@ -43,21 +43,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
             </div>
 
             <p className="text-xs sm:text-[13px] text-blue-100/80 leading-relaxed max-w-lg">
-              Cơ quan thường trực Ban Tổ chức Cuộc thi ảnh “Hành trình tiêm chủng - Vì một Việt Nam khỏe mạnh” kỷ niệm 40 năm triển khai Chương trình Tiêm chủng mở rộng.
+              Cơ quan thường trực Ban Tổ chức Cuộc thi ảnh “Hành trình tiêm chủng - Vì một Việt Nam khỏe mạnh” theo Kế hoạch số 414/KH-GDSKTW ngày 29/06/2026 của Trung tâm Truyền thông - Giáo dục sức khỏe Trung ương (Bộ Y tế).
             </p>
 
             <div className="space-y-2.5 pt-2 text-xs sm:text-[13px] text-blue-100">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#2EBDF4] shrink-0 mt-0.5" />
-                <span>Số 135 Núi Trúc, phường Kim Mã, quận Ba Đình, TP. Hà Nội</span>
+                <span>366 Đội Cấn, Ngọc Hà, Hà Nội</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#2EBDF4] shrink-0" />
-                <span>Đường dây nóng: <strong className="text-white font-bold tabular-nums">1900 9095</strong> - Điện thoại: <strong className="text-white font-bold tabular-nums">(024) 3846 4463</strong></span>
+                <span>Điện thoại: <strong className="text-white font-bold tabular-nums">0933.291.799</strong></span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#2EBDF4] shrink-0" />
-                <span>Email: <a href="mailto:cuocthianh.tcmr@moh.gov.vn" className="hover:underline text-white">cuocthianh.tcmr@moh.gov.vn</a></span>
+                <span>Email: <a href="mailto:tochucsukient5g@gmail.com" className="hover:underline text-white">tochucsukient5g@gmail.com</a></span>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
                   onClick={() => scrollTo('timeline')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Tiến độ & Kết quả
+                  Tiến độ
                 </button>
               </li>
             </ul>
@@ -125,18 +125,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
               Cổng thông tin ngành
             </h4>
             <div className="space-y-2.5 text-xs sm:text-[13px]">
-              <a
-                href="https://moh.gov.vn"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between p-2.5 rounded-lg bg-blue-900/40 hover:bg-blue-900/70 border border-blue-400/20 text-blue-100 hover:text-white transition-all group"
-              >
-                <div className="flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-[#2EBDF4]" />
-                  <span>Cổng TTĐT Bộ Y tế</span>
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100" />
-              </a>
+              
 
               <a
                 href="http://t5g.org.vn"
@@ -162,7 +151,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
         {/* Bottom Copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200/70 text-center sm:text-left">
           <p>@2026 Bản quyền thuộc về Myaloha.vn</p>
-          <p>Thiết kế theo chuẩn nhận diện y tế Việt Nam.</p>
         </div>
       </motion.div>
     </footer>

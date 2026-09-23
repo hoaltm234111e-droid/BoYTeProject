@@ -11,7 +11,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
     votes: 1420,
     location: 'Trạm Y tế xã Lao Chải, huyện Vị Xuyên, Hà Giang',
-    takenDate: '15/08/2024',
+    takenDate: '15/08/2026',
     description: 'Bé Vàng Thị Mây (18 tháng tuổi) được cán bộ y tế cơ sở tiêm vắc xin sởi - rubella trong chiến dịch tiêm bù vùng cao.'
   },
   {
@@ -28,7 +28,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     ],
     votes: 1285,
     location: 'Xã Y Tý, huyện Bát Xát, tỉnh Lào Cai',
-    takenDate: '22/07/2024',
+    takenDate: '22/07/2026',
     description: 'Bộ ảnh ghi lại chuyến đi ròng rã 6 tiếng của các y bác sĩ trạm y tế mang hòm lạnh bảo quản vắc xin qua đường đèo dốc sạt lở.'
   },
   {
@@ -41,7 +41,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=1000&q=80',
     votes: 980,
     location: 'Trung tâm Y tế quận Hải Châu, TP. Đà Nẵng',
-    takenDate: '05/09/2024',
+    takenDate: '05/09/2026',
     description: 'Bác sĩ chuyên khoa hướng dẫn phụ huynh theo dõi phản ứng sau tiêm 30 phút tại phòng chờ tiêm chủng mở rộng.'
   },
   {
@@ -54,7 +54,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
     votes: 1150,
     location: 'Viện Vệ sinh Dịch tễ Trung ương, Hà Nội',
-    takenDate: '18/08/2024',
+    takenDate: '18/08/2026',
     description: 'Quy trình kiểm tra nhiệt độ nghiêm ngặt và bảo quản vắc xin đạt chuẩn quốc gia trước khi phân bổ về các tỉnh miền núi.'
   },
   {
@@ -70,7 +70,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     ],
     votes: 1340,
     location: 'Quần đảo Thổ Chu, TP. Phú Quốc, tỉnh Kiên Giang',
-    takenDate: '10/08/2024',
+    takenDate: '10/08/2026',
     description: 'Bộ ảnh phản ánh nỗ lực tiêm chủng cho toàn bộ trẻ em và phụ nữ mang thai nơi đầu sóng ngọn gió vùng biển Tây Nam.'
   },
   {
@@ -83,21 +83,21 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80',
     votes: 890,
     location: 'Trạm Y tế xã Chiêu Lưu, huyện Kỳ Sơn, tỉnh Nghệ An',
-    takenDate: '28/07/2024',
+    takenDate: '28/07/2026',
     description: 'Khoảnh khắc điều dưỡng viên dỗ dành và tạo sự an tâm tuyệt đối cho cháu nhỏ trước khi tiêm vắc xin 5 trong 1.'
   },
   {
     id: '7',
     code: 'TC-007',
-    title: 'Hành trình 40 năm - Những bước chân không mỏi',
+    title: 'Lá chắn yêu thương - Vững vàng mầm non',
     author: 'Vũ Quốc Hưng (Lâm Đồng)',
     category: 'series',
     categoryLabel: 'Ảnh bộ',
     imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
     votes: 1120,
     location: 'Các buôn làng huyện Lạc Dương, tỉnh Lâm Đồng',
-    takenDate: '12/08/2024',
-    description: 'Ghi lại chân dung các thế hệ cán bộ y tế tận tụy gắn bó cùng chương trình tiêm chủng mở rộng suốt nhiều thập kỷ.'
+    takenDate: '12/08/2026',
+    description: 'Ghi lại chân dung các y bác sĩ tận tụy gắn bó cùng công tác tiêm chủng mở rộng cho đồng bào vùng sâu vùng xa.'
   },
   {
     id: '8',
@@ -109,7 +109,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80',
     votes: 940,
     location: 'Bệnh viện Nhi Đồng 1, TP. Hồ Chí Minh',
-    takenDate: '02/09/2024',
+    takenDate: '02/09/2026',
     description: 'Cử chỉ ân cần của bác sĩ tiêm chủng khi trao sổ theo dõi sức khỏe và lịch tiêm định kỳ cho gia đình trẻ.'
   },
   {
@@ -122,7 +122,7 @@ export const ARTWORKS_DATA: Artwork[] = [
     imageUrl: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80',
     votes: 1050,
     location: 'Điểm trường Co Mạ, huyện Thuận Châu, tỉnh Sơn La',
-    takenDate: '19/08/2024',
+    takenDate: '19/08/2026',
     description: 'Không khí tươi vui trong ngày khám sàng lọc và tiêm nhắc lại cho các bé mầm non đồng bào dân tộc H’Mông.'
   }
 ];
@@ -130,102 +130,94 @@ export const ARTWORKS_DATA: Artwork[] = [
 export const PRIZE_DATA: PrizeItem[] = [
   {
     id: 'p1',
-    title: '01 GIẢI ĐẶC BIỆT',
-    category: 'Chung cho tác phẩm xuất sắc nhất',
-    quantity: 1,
-    cashValue: '30.000.000 VNĐ',
-    description: 'Tác phẩm có giá trị nghệ thuật và thông điệp truyền thông sâu sắc nhất về 40 năm Tiêm chủng mở rộng.',
-    bonus: 'Bằng khen của Bộ trưởng Bộ Y tế + Cúp lưu niệm + Giấy chứng nhận',
+    title: '01 GIẢI NHẤT (MỖI LOẠI HÌNH)',
+    category: '01 Giải Ảnh đơn & 01 Giải Ảnh bộ',
+    quantity: 2,
+    cashValue: '10.000.000 đ',
+    description: 'Trao cho tác phẩm xuất sắc nhất mỗi loại hình, đạt tổng điểm cao nhất kết hợp 80% từ Hội đồng Giám khảo và 20% bình chọn trực tuyến.',
+    bonus: 'Giấy chứng nhận + Cúp/Kỷ niệm chương của BTC',
     isSpecial: true
   },
   {
     id: 'p2',
-    title: '02 GIẢI NHẤT',
-    category: '01 Giải Ảnh đơn & 01 Giải Ảnh bộ',
-    quantity: 2,
-    cashValue: '15.000.000 VNĐ / giải',
-    description: 'Tác phẩm đạt điểm cao nhất theo đánh giá của Ban Giám khảo và cộng đồng trong từng thể loại.',
-    bonus: 'Bằng khen của Bộ Y tế + Kỷ niệm chương + Giấy chứng nhận'
+    title: '03 GIẢI NHÌ (MỖI LOẠI HÌNH)',
+    category: '03 Giải Ảnh đơn & 03 Giải Ảnh bộ',
+    quantity: 6,
+    cashValue: '7.000.000 đ / giải',
+    description: 'Các tác phẩm có chất lượng bố cục, ánh sáng và khoảnh khắc xuất sắc, truyền tải trọn vẹn thông điệp bảo vệ sức khỏe cộng đồng.',
+    bonus: 'Giấy chứng nhận + Cúp/Kỷ niệm chương của BTC'
   },
   {
     id: 'p3',
-    title: '04 GIẢI NHÌ',
-    category: '02 Giải Ảnh đơn & 02 Giải Ảnh bộ',
-    quantity: 4,
-    cashValue: '10.000.000 VNĐ / giải',
-    description: 'Các tác phẩm có chất lượng bố cục, ánh sáng và khoảnh khắc xuất sắc.',
-    bonus: 'Giấy chứng nhận của Ban Tổ chức + Kỷ niệm chương'
+    title: '05 GIẢI BA (MỖI LOẠI HÌNH)',
+    category: '05 Giải Ảnh đơn & 05 Giải Ảnh bộ',
+    quantity: 10,
+    cashValue: '5.000.000 đ / giải',
+    description: 'Tác phẩm thể hiện chân thực tinh thần trách nhiệm, sự tận tụy của cán bộ y tế cơ sở và sự đồng thuận của nhân dân.',
+    bonus: 'Giấy chứng nhận + Cúp/Kỷ niệm chương của BTC'
   },
   {
     id: 'p4',
-    title: '06 GIẢI BA',
-    category: '03 Giải Ảnh đơn & 03 Giải Ảnh bộ',
-    quantity: 6,
-    cashValue: '5.000.000 VNĐ / giải',
-    description: 'Tác phẩm thể hiện chân thực tinh thần vượt khó của cán bộ y tế cơ sở.',
-    bonus: 'Giấy chứng nhận của Ban Tổ chức + Kỷ niệm chương'
+    title: '07 GIẢI KHUYẾN KHÍCH (MỖI LOẠI HÌNH)',
+    category: '07 Giải Ảnh đơn & 07 Giải Ảnh bộ',
+    quantity: 14,
+    cashValue: '3.000.000 đ / giải',
+    description: 'Tác phẩm đạt chuẩn kỹ thuật và nghệ thuật, mang ý nghĩa lan tỏa tích cực về lợi ích của tiêm chủng mở rộng.',
+    bonus: 'Giấy chứng nhận + Cúp/Kỷ niệm chương của BTC'
   },
   {
     id: 'p5',
-    title: '10 GIẢI KHUYẾN KHÍCH',
-    category: '05 Ảnh đơn & 05 Ảnh bộ',
-    quantity: 10,
-    cashValue: '2.500.000 VNĐ / giải',
-    description: 'Tác phẩm đạt chuẩn sơ khảo với thông điệp ý nghĩa vì sức khỏe trẻ thơ.',
-    bonus: 'Giấy chứng nhận của Ban Tổ chức'
-  },
-  {
-    id: 'p6',
-    title: '02 GIẢI BÌNH CHỌN CỘNG ĐỒNG',
-    category: 'Tác phẩm được bình chọn nhiều nhất',
-    quantity: 2,
-    cashValue: '5.000.000 VNĐ / giải',
-    description: 'Dành cho 01 ảnh đơn và 01 ảnh bộ nhận số lượt vote cao nhất trên Cổng bình chọn trực tuyến.',
-    bonus: 'Giấy chứng nhận của Ban Tổ chức'
+    title: '09 GIẢI CHUYÊN ĐỀ (MỖI LOẠI HÌNH)',
+    category: '09 Giải Ảnh đơn & 09 Giải Ảnh bộ',
+    quantity: 18,
+    cashValue: '1.500.000 đ / giải',
+    description: 'Tiêu chí cụ thể do Ban Giám khảo thống nhất và quyết định dựa trên chất lượng thực tế của các sản phẩm dự thi.',
+    bonus: 'Giấy chứng nhận + Cúp/Kỷ niệm chương của BTC'
   }
 ];
 
 export const TIMELINE_DATA: TimelineStep[] = [
   {
     id: 1,
-    title: 'Phát động',
-    date: '01/08/2024',
-    description: 'Công bố thể lệ và phát động cuộc thi trên toàn quốc',
+    title: 'GĐ 1: Chuẩn bị & Phát động',
+    date: 'Tháng 6 - 8/2026',
+    description: 'Ban hành Kế hoạch, Thể lệ; lập Ban Tổ chức, BGK, Tổ Thư ký; thiết lập cổng trực tuyến và tổ chức Lễ phát động.',
     status: 'completed'
   },
   {
     id: 2,
-    title: 'Nhận tác phẩm',
-    date: '01/08 - 15/09/2024',
-    description: 'Tiếp nhận hồ sơ dự thi của tác giả cả nước',
-    status: 'completed'
-  },
-  {
-    id: 3,
-    title: 'Sơ khảo',
-    date: '16/09 - 25/09/2024',
-    description: 'Hội đồng Giám khảo chọn lọc 100 tác phẩm vào vòng bình chọn',
-    status: 'completed'
-  },
-  {
-    id: 4,
-    title: 'Bình chọn',
-    date: '01/10 - 20/10/2024',
-    description: 'Mở cổng bình chọn trực tuyến công khai trên hệ thống Bộ Y tế',
+    title: 'GĐ 2: Tiếp nhận hồ sơ',
+    date: 'Từ phát động - 15/10/2026',
+    description: 'Tiếp nhận sản phẩm dự thi trực tuyến qua cổng Cuocthitiemchung2026.org; sàng lọc kỹ thuật và rà soát tính hợp lệ.',
     status: 'active'
   },
   {
+    id: 3,
+    title: 'GĐ 3: Chấm Sơ khảo',
+    date: 'Tháng 10/2026',
+    description: 'Hội đồng Giám khảo chấm sơ khảo, lựa chọn ra 100 tác phẩm xuất sắc nhất (gồm 50 ảnh đơn và 50 chùm ảnh).',
+    status: 'upcoming'
+  },
+  {
+    id: 4,
+    title: 'GĐ 3: Bình chọn trực tuyến',
+    date: 'Tháng 10 - 11/2026',
+    description: 'Mở cổng bình chọn trực tuyến công khai cho 100 tác phẩm vào Vòng Sơ khảo; rà soát chống gian lận tương tác.',
+    status: 'upcoming'
+  },
+  {
     id: 5,
-    title: 'Chung khảo',
-    date: '22/10 - 28/10/2024',
-    description: 'Chấm điểm chung khảo kết hợp tỷ trọng 20% điểm cộng đồng',
+    title: 'GĐ 3: Chấm Chung khảo',
+    date: 'Tháng 11/2026',
+    description: 'Hội đồng Giám khảo chấm độc lập 100 tác phẩm (Tổng điểm = 80% chuyên môn + 20% điểm bình chọn trực tuyến).',
     status: 'upcoming'
   },
   {
     id: 6,
-    title: 'Trao giải',
-    date: '15/11/2024',
-    description: 'Lễ công bố và trao giải thưởng chính thức tại Hà Nội',
+    title: 'GĐ 4: Tổng kết & Trao giải',
+    date: 'Tháng 11 - 12/2026',
+    description: 'Tổ chức Lễ Tổng kết, công bố và trao giải thưởng; lưu trữ tư liệu phục vụ truyền thông - giáo dục sức khỏe.',
     status: 'upcoming'
   }
 ];
+

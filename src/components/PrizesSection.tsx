@@ -23,13 +23,13 @@ export const PrizesSection: React.FC = () => {
             CƠ CẤU GIẢI THƯỞNG
           </h2>
           <div className="w-20 h-1 bg-[#0984F0] mx-auto mt-2.5 rounded-full"></div>
-          <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
-            Tổng giá trị giải thưởng tiền mặt và hiện vật lên đến hơn 150 triệu đồng cùng Bằng khen danh dự của Bộ Y tế.
+          <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
+            Cơ cấu giải thưởng gồm 05 mức giải được trao độc lập cho mỗi loại hình (Ảnh đơn và Ảnh bộ) kèm Giấy chứng nhận và Cúp/Kỷ niệm chương của BTC.
           </p>
         </motion.div>
 
-        {/* Prizes Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Prizes Container */}
+        <div className="flex flex-wrap justify-center gap-6">
           {PRIZE_DATA.map((prize, index) => {
             return (
               <motion.div
@@ -39,7 +39,7 @@ export const PrizesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className={`rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between border ${
+                className={`w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between border ${
                   prize.isSpecial
                     ? 'bg-gradient-to-b from-white to-amber-50/40 border-amber-300 shadow-md ring-2 ring-amber-400/20'
                     : 'bg-white border-slate-200/90 shadow-xs hover:shadow-md'
@@ -98,6 +98,7 @@ export const PrizesSection: React.FC = () => {
           })}
         </div>
 
+  
       </div>
     </section>
   );
