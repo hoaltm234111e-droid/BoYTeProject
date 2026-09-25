@@ -182,14 +182,14 @@ export const TIMELINE_DATA: TimelineStep[] = [
     title: 'GĐ 1: Phát động',
     date: 'Tháng 9/2026',
     description: 'Ban hành Kế hoạch, Thể lệ',
-    status: 'completed'
+    status: 'active'
   },
   {
     id: 2,
     title: 'GĐ 2: Nộp sản phẩm',
     date: 'Từ phát động - 31/10/2026',
     description: 'Tiếp nhận sản phẩm dự thi trực tuyến qua cổng Cuocthitiemchung2026.org',
-    status: 'active'
+    status: 'upcoming'
   },
   {
     id: 3,

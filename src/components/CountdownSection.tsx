@@ -167,7 +167,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({ onSubmitClic
           <div className="flex items-center gap-1.5">
             <Calendar className="w-4 h-4 text-[#2E79F4] shrink-0" />
             <span>
-              Thời gian tiếp nhận tác phẩm: <strong className="font-bold text-[#1E3A8A]">Từ ngày phát động đến hết ngày 15/10/2026</strong>
+              Thời gian tiếp nhận tác phẩm: <strong className="font-bold text-[#1E3A8A]">Từ ngày phát động đến hết ngày 31/10/2026</strong>
             </span>
           </div>
         </motion.div>

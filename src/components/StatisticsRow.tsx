@@ -40,7 +40,7 @@ export const StatisticsRow: React.FC<StatisticsRowProps> = ({
 
             {/* Sub-label: Sản phẩm đã nộp */}
             <h3 className="mt-2.5 text-lg sm:text-xl lg:text-[22px] font-semibold text-[#21469A] tracking-normal">
-              Sản phẩm đã nộp
+              Bài dự thi
             </h3>
           </motion.div>
 
@@ -63,7 +63,7 @@ export const StatisticsRow: React.FC<StatisticsRowProps> = ({
                   {formatNumber(singleCount)}
                 </span>
                 <span className="mt-1 text-xs sm:text-sm font-medium text-slate-600">
-                  Ảnh đơn
+                  Tác giả
                 </span>
               </motion.div>
 
@@ -82,7 +82,7 @@ export const StatisticsRow: React.FC<StatisticsRowProps> = ({
                   {formatNumber(seriesCount)}
                 </span>
                 <span className="mt-1 text-xs sm:text-sm font-medium text-slate-600">
-                  Ảnh bộ
+                  Đơn vị tham gia
                 </span>
               </motion.div>
 
