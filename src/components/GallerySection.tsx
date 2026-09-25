@@ -50,7 +50,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   }, [artworks, currentTab, searchQuery, sortBy]);
 
   return (
-    <section id="gallery" className="py-16 bg-[#F6FBFD] border-b border-slate-200/80 overflow-hidden">
+    <section id="gallery" className="py-14 sm:py-16 bg-gradient-to-b from-[#EDF6FD] via-[#F6FAFE] to-[#EEF7FC] border-y border-sky-100 overflow-hidden text-slate-800">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
@@ -59,16 +59,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-10"
+          className="text-center mb-9 sm:mb-10"
         >
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#E7F6FC] text-[#0984F0] text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#E7F6FC] text-[#21469A] border border-sky-200/80 text-xs font-bold uppercase tracking-wider mb-2">
             VÒNG BÌNH CHỌN TRỰC TUYẾN
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#21469A] uppercase tracking-tight">
             TÁC PHẨM BÌNH CHỌN
           </h2>
           <div className="w-20 h-1 bg-[#0984F0] mx-auto mt-2.5 rounded-full"></div>
-          <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto">
+          <p className="mt-3 text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
             Mỗi lượt bình chọn của quý vị là nguồn cổ vũ to lớn cho các tác giả và tôn vinh những cống hiến thầm lặng của đội ngũ y tế.
           </p>
         </motion.div>

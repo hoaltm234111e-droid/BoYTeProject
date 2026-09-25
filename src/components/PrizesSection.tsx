@@ -101,7 +101,7 @@ const TIER_CONFIGS: Record<string, TierConfig> = {
 
 export const PrizesSection: React.FC = () => {
   return (
-    <section id="prizes" className="py-10 sm:py-14 bg-[#F6FBFD] border-b border-slate-200/80 overflow-hidden">
+    <section id="prizes" className="py-14 sm:py-16 bg-gradient-to-b from-[#EDF6FD] via-[#F6FAFE] to-[#EEF7FC] border-y border-sky-100 overflow-hidden text-slate-800">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
@@ -110,16 +110,16 @@ export const PrizesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-8 sm:mb-9"
+          className="text-center mb-8 sm:mb-10"
         >
-          <div className="inline-block px-3 py-0.5 rounded-full bg-[#E7F6FC] text-[#0984F0] text-xs font-bold uppercase tracking-wider mb-1.5">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E7F6FC] text-[#21469A] border border-sky-200/80 text-xs font-bold uppercase tracking-wider mb-2">
             DANH MỤC KHEN THƯỞNG CHÍNH THỨC
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#21469A] uppercase tracking-tight">
             CƠ CẤU GIẢI THƯỞNG
           </h2>
           <div className="w-16 h-1 bg-[#0984F0] mx-auto mt-2 rounded-full"></div>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
+          <p className="mt-2.5 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
             Cơ cấu giải thưởng gồm 05 mức giải được trao độc lập cho mỗi loại hình (Ảnh đơn và Ảnh bộ) kèm Giấy chứng nhận và Cúp/Kỷ niệm chương của BTC.
           </p>
         </motion.div>
