@@ -179,42 +179,36 @@ export const PRIZE_DATA: PrizeItem[] = [
 export const TIMELINE_DATA: TimelineStep[] = [
   {
     id: 1,
-    title: 'GĐ 1: Chuẩn bị & Phát động',
-    date: 'Tháng 6 - 8/2026',
+    title: 'GĐ 1: Phát động',
+    date: 'Tháng 9/2026',
     description: 'Ban hành Kế hoạch, Thể lệ',
     status: 'completed'
   },
   {
     id: 2,
-    title: 'GĐ 2: Tiếp nhận hồ sơ',
-    date: 'Từ phát động - 15/10/2026',
+    title: 'GĐ 2: Nộp sản phẩm',
+    date: 'Từ phát động - 31/10/2026',
     description: 'Tiếp nhận sản phẩm dự thi trực tuyến qua cổng Cuocthitiemchung2026.org',
     status: 'active'
   },
   {
     id: 3,
     title: 'GĐ 3: Chấm Sơ khảo',
-    date: 'Tháng 10/2026',
+    date: '1/11 - 14/11/2026',
     description: 'Hội đồng Giám khảo chấm sơ khảo, lựa chọn ra 100 tác phẩm xuất sắc nhất',
     status: 'upcoming'
   },
   {
     id: 4,
-    title: 'GĐ 3: Bình chọn trực tuyến',
-    date: 'Tháng 10 - 11/2026',
-    description: 'Mở cổng bình chọn trực tuyến công khai cho 100 tác phẩm vào Vòng Sơ khảo',
+    title: 'GĐ 4: Bình chọn & Chấm chung khảo',
+    date: '15/11 - 30/11/2026',
+    description: 'Mở cổng bình chọn trực tuyến công khai và chấm chung khảo',
     status: 'upcoming'
   },
+  
   {
     id: 5,
-    title: 'GĐ 3: Chấm Chung khảo',
-    date: 'Tháng 11/2026',
-    description: 'Hội đồng Giám khảo chấm độc lập 100 tác phẩm',
-    status: 'upcoming'
-  },
-  {
-    id: 6,
-    title: 'GĐ 4: Tổng kết & Trao giải',
+    title: 'GĐ 5: Tổng kết & Trao giải',
     date: 'Tháng 11 - 12/2026',
     description: 'Tổ chức Lễ Tổng kết, công bố và trao giải thưởng',
     status: 'upcoming'

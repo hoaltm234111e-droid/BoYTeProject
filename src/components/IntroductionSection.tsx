@@ -25,30 +25,21 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({ onOpen
               <span>Ý NGHĨA & MỤC ĐÍCH</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#21469A] uppercase tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#21469A] uppercase tracking-tight">
               GIỚI THIỆU CUỘC THI
             </h2>
             <div className="w-16 h-1 bg-[#0984F0] mt-2 mb-6 rounded-full"></div>
 
             <div className="space-y-4 text-slate-600 text-sm sm:text-[15px] leading-relaxed">
               <p>
-                Căn cứ Kế hoạch số 414/KH-GDSKTW ngày 29/06/2026 của Trung tâm Truyền thông - Giáo dục sức khỏe Trung ương (Bộ Y tế), Cuộc thi ảnh về Chương trình Tiêm chủng mở rộng: <strong>“Hành trình tiêm chủng – Vì một Việt Nam khỏe mạnh”</strong> với khẩu hiệu <em>“Lá chắn bảo vệ con bạn và cộng đồng”</em> được tổ chức trên phạm vi toàn quốc từ tháng 6 đến tháng 12 năm 2026.
+                Căn cứ Kế hoạch số 414/KH-GDSKTW ngày 29/06/2026 của Trung tâm Truyền thông - Giáo dục sức khỏe Trung ương (Bộ Y tế), Cuộc thi ảnh về Chương trình Tiêm chủng mở rộng: <strong>“Hành trình tiêm chủng – Vì một Việt Nam khỏe mạnh”</strong> với khẩu hiệu <em>“Lá chắn bảo vệ con bạn và cộng đồng”</em> được tổ chức trên phạm vi toàn quốc từ tháng 10 đến tháng 12 năm 2026.
               </p>
               <p>
                 Cuộc thi nhằm phổ biến sâu rộng chủ trương của Đảng, chính sách pháp luật của Nhà nước và ngành Y tế về tiêm chủng mở rộng; khẳng định tiêm chủng là biện pháp dự phòng chủ động, an toàn, bền vững để bảo vệ con trẻ và cộng đồng. Đồng thời, biểu dương và tôn vinh những khoảnh khắc chân thực, nhân văn, người thật - việc thật cùng sự cống hiến thầm lặng của đội ngũ cán bộ y tế cơ sở trên mọi nẻo đường Tổ quốc.
               </p>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3 py-2 rounded-xl">
-                <Award className="w-4 h-4 text-[#0984F0]" />
-                <span>Quy mô toàn quốc</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-[#F6FBFD] border border-sky-100 px-3 py-2 rounded-xl">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Kế hoạch 414/KH-GDSKTW - Bộ Y tế</span>
-              </div>
-            </div>
+      
 
             {/* CTA Button: Xem thể lệ cuộc thi */}
             <div className="mt-8">
