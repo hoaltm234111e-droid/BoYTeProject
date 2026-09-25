@@ -18,8 +18,7 @@ import {
   Eye,
   HelpCircle,
   Info,
-  X,
-  FileDown
+  X
 } from 'lucide-react';
 import { MohLogo } from './MohLogo';
 
@@ -458,48 +457,58 @@ ${contentHtml}
   ];
 
   // ----------------------------------------------------
-  // SUCCESS SCREEN
+  // SUCCESS SCREEN (THÍ SINH ĐÃ NỘP BÀI THÀNH CÔNG)
   // ----------------------------------------------------
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-[#F6FBFD] py-10 sm:py-16">
-        <div className="max-w-[860px] mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-10 text-center">
-            <MohLogo className="w-16 h-16 mx-auto mb-4" />
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-3">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Ghi nhận hồ sơ thành công</span>
+      <div className="min-h-screen bg-[#F6FBFD] py-12 sm:py-20 flex items-center justify-center px-4 sm:px-6">
+        <div className="max-w-[840px] w-full mx-auto">
+          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xs p-8 sm:p-14 text-center animate-in fade-in zoom-in-95 duration-200">
+            
+            {/* Logo Bộ Y tế - T5G */}
+            <div className="flex justify-center mb-6">
+              <MohLogo withSubtext={true} className="w-20 h-20 sm:w-24 sm:h-24 drop-shadow-2xs" />
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-[#21469A] uppercase tracking-tight">
+            {/* Pill Badge: GHI NHẬN HỒ SƠ THÀNH CÔNG */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50/90 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-bold tracking-wide mb-4">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>GHI NHẬN HỒ SƠ THÀNH CÔNG</span>
+            </div>
+
+            {/* Tiêu đề chính */}
+            <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#23428D] uppercase tracking-tight mb-3">
               THÍ SINH ĐÃ NỘP BÀI THÀNH CÔNG
             </h1>
-            <p className="text-slate-600 text-sm mt-2 max-w-lg mx-auto">
+
+            {/* Mô tả phụ */}
+            <p className="text-slate-600 text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-8">
               Hệ thống đã tiếp nhận thành công bài dự thi Cuộc thi ảnh “Hành trình tiêm chủng – Vì một Việt Nam khỏe mạnh”.
             </p>
 
-            {/* Status */}
-            <div className="mt-8 bg-[#F6FBFD] border border-sky-200 rounded-xl p-4 sm:p-5 max-w-md mx-auto flex items-center justify-between">
-              <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider">
-                Trạng thái bài
+            {/* Khung trạng thái bài */}
+            <div className="bg-[#F8FBFD] border border-sky-200 rounded-2xl p-5 sm:p-6 max-w-xl mx-auto flex items-center justify-between gap-4 mb-8">
+              <span className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider">
+                TRẠNG THÁI BÀI
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-xs font-bold">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                Đang chờ kiểm duyệt sơ khảo
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FEF9EC] text-[#B45309] border border-[#FDE68A] text-xs sm:text-sm font-bold shadow-2xs">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
+                <span>Đang chờ kiểm duyệt sơ khảo</span>
               </span>
             </div>
 
-            {/* Actions */}
-            <div className="mt-8 flex items-center justify-center">
+            {/* Nút hành động */}
+            <div className="flex items-center justify-center">
               <button
+                type="button"
                 onClick={onBackToHome}
-                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-[#21469A] hover:bg-[#0984F0] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
+                className="px-8 py-3.5 rounded-xl bg-[#2D4392] hover:bg-[#22367D] text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all cursor-pointer"
               >
                 <span>Về trang chủ cuộc thi</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
+
           </div>
         </div>
       </div>
@@ -535,8 +544,8 @@ ${contentHtml}
               onClick={() => setPreviewTemplate('form01')}
               className="hidden sm:inline-flex items-center gap-1 text-[#0984F0] hover:text-[#21469A] font-semibold transition-colors cursor-pointer"
             >
-              <FileDown className="w-3.5 h-3.5" />
-              <span>Tải biểu mẫu Mẫu 01 & Mẫu 02</span>
+              <Download className="w-3.5 h-3.5" />
+              <span>Tải biểu mẫu Mẫu 01</span>
             </button>
             <button
               onClick={handleSaveDraft}
@@ -1116,49 +1125,31 @@ ${contentHtml}
               </div>
             </div>
 
-            {/* 1. KHU VỰC TẢI BIỂU MẪU THAM KHẢO CỦA BAN TỔ CHỨC */}
-            <div className="bg-[#EDF6FD] border border-sky-200 rounded-2xl p-5 sm:p-6">
-              <div className="flex items-center gap-2 mb-2">
-                <FileDown className="w-5 h-5 text-[#0984F0]" />
-                <h3 className="text-sm font-extrabold text-[#21469A] uppercase tracking-wide">
-                  TẢI VỀ BIỂU MẪU CỦA BAN TỔ CHỨC ĐỂ ĐIỀN VÀ KÝ XÁC NHẬN
-                </h3>
-              </div>
-              <p className="text-xs text-slate-600 mb-4 leading-relaxed">
-                Thí sinh tải file mẫu văn bản (.doc) có sẵn thông tin cơ bản, in ra ký tên (hoặc ký số hợp lệ), sau đó quét (scan) hoặc chụp ảnh rõ nét để tải lên hệ thống bên dưới.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Card Mẫu 01 */}
-                <div className="bg-white rounded-xl border border-sky-200 p-4 shadow-2xs flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-red-100 text-[#D51517]">
-                        Bắt buộc nộp
-                      </span>
-                      <span className="text-[11px] font-semibold text-slate-500">Mẫu số 01</span>
-                    </div>
-                    <h4 className="text-sm font-bold text-[#21469A] leading-snug">
-                      Phiếu đăng ký dự thi (Kèm Kế hoạch số 414/KH-GDSKTW)
-                    </h4>
-                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                      Dành cho cá nhân hoặc đại diện nhóm tác giả khai báo thông tin dự thi và xác nhận cam kết bản quyền.
-                    </p>
+            {/* DANH SÁCH 2 THÀNH PHẦN HỒ SƠ PHÁP LÝ (MẪU 01 & MẪU 02) */}
+            <div className="space-y-6">
+              {/* 1. THÀNH PHẦN HỒ SƠ BẮT BUỘC: PHIẾU ĐĂNG KÝ MẪU 01 */}
+              <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                  <div className="flex items-center gap-2">
+                    <FileCheck2 className="w-4 h-4 text-[#0984F0] shrink-0" />
+                    <span className="text-sm font-bold text-slate-800 uppercase">
+                      File scan Phiếu đăng ký dự thi (Mẫu 01)
+                    </span>
+                    <span className="text-red-500 font-bold">*</span>
                   </div>
-
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2">
+                  <div className="flex items-center gap-2 shrink-0">
                     <button
                       type="button"
                       onClick={() => downloadTemplateDoc('form01')}
-                      className="flex-1 py-2 px-3 rounded-lg bg-[#21469A] hover:bg-[#0984F0] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                      className="py-1.5 px-3 rounded-lg bg-[#21469A] hover:bg-[#0984F0] text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
                     >
                       <Download className="w-3.5 h-3.5" />
-                      <span>Tải file Word (.doc)</span>
+                      <span>Tải Mẫu 01 (.doc)</span>
                     </button>
                     <button
                       type="button"
                       onClick={() => setPreviewTemplate('form01')}
-                      className="py-2 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center gap-1 transition-colors cursor-pointer"
+                      className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-white text-slate-700 font-semibold text-xs flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Xem mẫu</span>
@@ -1166,172 +1157,140 @@ ${contentHtml}
                   </div>
                 </div>
 
-                {/* Card Mẫu 02 */}
-                <div className="bg-white rounded-xl border border-sky-200 p-4 shadow-2xs flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-sky-100 text-[#0984F0]">
-                        Nếu có nhân vật
-                      </span>
-                      <span className="text-[11px] font-semibold text-slate-500">Mẫu số 02</span>
-                    </div>
-                    <h4 className="text-sm font-bold text-[#21469A] leading-snug">
-                      Bản cam kết đồng ý của nhân vật xuất hiện trong ảnh
-                    </h4>
-                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                      Áp dụng với ảnh chụp chân dung rõ mặt nhân vật hoặc trẻ em (có chữ ký của nhân vật hoặc người giám hộ).
-                    </p>
-                  </div>
+                <p className="text-xs text-slate-600">
+                  Thí sinh tải mẫu văn bản (.doc) ở trên để in ra ký xác nhận, sau đó quét (scan) hoặc chụp ảnh rõ nét và tải lên đây (PDF, JPG, PNG tối đa 10MB).
+                </p>
 
-                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2">
+                <div className="relative border-2 border-dashed border-sky-300 hover:border-[#0984F0] bg-white rounded-xl p-6 text-center transition-all cursor-pointer">
+                  <input
+                    type="file"
+                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files[0]) {
+                        setDocs({
+                          ...docs,
+                          form01Name: e.target.files[0].name,
+                          form01Size: `${(e.target.files[0].size / 1024).toFixed(0)} KB`
+                        });
+                      }
+                    }}
+                    className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+                  />
+                  {docs.form01Name ? (
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-2 px-2">
+                      <div className="flex items-center gap-2 text-emerald-700 text-sm font-bold truncate">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <span className="truncate">{docs.form01Name} ({docs.form01Size})</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs text-[#0984F0] font-semibold underline">Chọn file khác</span>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setDocs({ ...docs, form01Name: '', form01Size: '' });
+                          }}
+                          className="text-xs text-red-500 hover:text-red-700 font-semibold underline z-10 relative cursor-pointer"
+                        >
+                          Xóa
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-1.5 text-slate-600">
+                      <Upload className="w-6 h-6 text-[#0984F0]" />
+                      <span className="text-xs font-bold text-slate-700">Bấm để tải lên File scan Phiếu Mẫu 01 (bắt buộc)</span>
+                      <span className="text-[11px] text-slate-400">Hỗ trợ định dạng PDF, PNG, JPG, DOC (tối đa 10MB)</span>
+                    </div>
+                  )}
+                </div>
+                {errors.form01 && (
+                  <p className="text-xs text-red-500 flex items-center gap-1">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>{errors.form01}</span>
+                  </p>
+                )}
+              </div>
+
+              {/* 2. THÀNH PHẦN HỒ SƠ 02: BẢN CAM KẾT NHÂN VẬT MẪU 02 */}
+              <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                  <div className="flex items-center gap-2">
+                    <FileCheck2 className="w-4 h-4 text-[#0984F0] shrink-0" />
+                    <span className="text-sm font-bold text-slate-800 uppercase">
+                      File scan Bản cam kết đồng ý của nhân vật (Mẫu 02)
+                    </span>
+                    <span className="text-xs font-medium text-slate-500 bg-slate-200/80 px-2 py-0.5 rounded-md">
+                      Nếu có nhân vật
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
                     <button
                       type="button"
                       onClick={() => downloadTemplateDoc('form02')}
-                      className="flex-1 py-2 px-3 rounded-lg bg-[#0984F0] hover:bg-[#21469A] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                      className="py-1.5 px-3 rounded-lg bg-[#21469A] hover:bg-[#0984F0] text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
                     >
                       <Download className="w-3.5 h-3.5" />
-                      <span>Tải file Word (.doc)</span>
+                      <span>Tải Mẫu 02 (.doc)</span>
                     </button>
                     <button
                       type="button"
                       onClick={() => setPreviewTemplate('form02')}
-                      className="py-2 px-3 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center gap-1 transition-colors cursor-pointer"
+                      className="py-1.5 px-3 rounded-lg border border-slate-200 hover:bg-white text-slate-700 font-semibold text-xs flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Xem mẫu</span>
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* 2. KHU VỰC TẢI LÊN FILE SCAN ĐÃ KÝ XÁC NHẬN */}
-            <div>
-              <h3 className="text-sm font-bold text-slate-800 uppercase mb-3 flex items-center gap-2">
-                <FileCheck2 className="w-4 h-4 text-[#0984F0]" />
-                <span>Thành phần hồ sơ tải lên hệ thống</span>
-              </h3>
+                <p className="text-xs text-slate-600">
+                  Dành cho tác phẩm có hình ảnh nhận diện nhân vật (người lớn hoặc trẻ em). Thí sinh tải mẫu (.doc) để người được chụp hoặc người giám hộ ký đồng ý, sau đó quét hoặc chụp ảnh rõ nét và tải lên đây (PDF, JPG, PNG tối đa 10MB).
+                </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {/* Form 01 Upload (Bắt buộc) */}
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-800 uppercase">
-                      1. File scan Phiếu đăng ký dự thi (Mẫu 01) <span className="text-red-500">*</span>
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => downloadTemplateDoc('form01')}
-                      className="text-[11px] text-[#0984F0] hover:underline flex items-center gap-1 cursor-pointer"
-                    >
-                      <Download className="w-3 h-3" />
-                      <span>Tải Mẫu 01</span>
-                    </button>
-                  </div>
-
-                  <p className="text-[11px] text-slate-500">
-                    File scan hoặc ảnh chụp Phiếu Mẫu 01 có chữ ký xác nhận của tác giả (PDF, JPG, PNG tối đa 10MB).
-                  </p>
-
-                  <div className="relative border border-dashed border-slate-300 hover:border-[#0984F0] bg-white rounded-lg p-3.5 text-center cursor-pointer">
-                    <input
-                      type="file"
-                      accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-                      onChange={(e) => {
-                        if (e.target.files && e.target.files[0]) {
-                          setDocs({
-                            ...docs,
-                            form01Name: e.target.files[0].name,
-                            form01Size: `${(e.target.files[0].size / 1024).toFixed(0)} KB`
-                          });
-                        }
-                      }}
-                      className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
-                    />
-                    {docs.form01Name ? (
-                      <div className="flex items-center justify-center gap-2 text-emerald-700 text-xs font-bold">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        <span>{docs.form01Name} ({docs.form01Size})</span>
+                <div className="relative border-2 border-dashed border-sky-300 hover:border-[#0984F0] bg-white rounded-xl p-6 text-center transition-all cursor-pointer">
+                  <input
+                    type="file"
+                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files[0]) {
+                        setDocs({
+                          ...docs,
+                          form02Name: e.target.files[0].name,
+                          form02Size: `${(e.target.files[0].size / 1024).toFixed(0)} KB`
+                        });
+                      }
+                    }}
+                    className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+                  />
+                  {docs.form02Name ? (
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-2 px-2">
+                      <div className="flex items-center gap-2 text-emerald-700 text-sm font-bold truncate">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <span className="truncate">{docs.form02Name} ({docs.form02Size})</span>
                       </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-2 text-xs text-slate-600">
-                        <Upload className="w-4 h-4 text-[#0984F0]" />
-                        <span>Bấm để tải lên File scan Phiếu Mẫu 01 (bắt buộc)</span>
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs text-[#0984F0] font-semibold underline">Chọn file khác</span>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setDocs({ ...docs, form02Name: '', form02Size: '' });
+                          }}
+                          className="text-xs text-red-500 hover:text-red-700 font-semibold underline z-10 relative cursor-pointer"
+                        >
+                          Xóa
+                        </button>
                       </div>
-                    )}
-                  </div>
-                  {errors.form01 && (
-                    <p className="text-xs text-red-500 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" />
-                      <span>{errors.form01}</span>
-                    </p>
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-1.5 text-slate-600">
+                      <Upload className="w-6 h-6 text-[#0984F0]" />
+                      <span className="text-xs font-bold text-slate-700">Bấm để tải lên File scan Bản cam kết Mẫu 02 (nếu có nhân vật)</span>
+                      <span className="text-[11px] text-slate-400">Hỗ trợ định dạng PDF, PNG, JPG, DOC (tối đa 10MB)</span>
+                    </div>
                   )}
                 </div>
-
-                {/* Form 02 Upload (Nếu có) */}
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-800 uppercase">
-                      2. File scan Bản cam kết nhân vật (Mẫu 02)
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => downloadTemplateDoc('form02')}
-                      className="text-[11px] text-[#0984F0] hover:underline flex items-center gap-1 cursor-pointer"
-                    >
-                      <Download className="w-3 h-3" />
-                      <span>Tải Mẫu 02</span>
-                    </button>
-                  </div>
-
-                  <p className="text-[11px] text-slate-500">
-                    File scan Bản cam kết có chữ ký của nhân vật/người giám hộ (nếu ảnh có cận cảnh nhân vật rõ mặt).
-                  </p>
-
-                  <div className="relative border border-dashed border-slate-300 hover:border-[#0984F0] bg-white rounded-lg p-3.5 text-center cursor-pointer">
-                    <input
-                      type="file"
-                      accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-                      onChange={(e) => {
-                        if (e.target.files && e.target.files[0]) {
-                          setDocs({
-                            ...docs,
-                            form02Name: e.target.files[0].name,
-                            form02Size: `${(e.target.files[0].size / 1024).toFixed(0)} KB`
-                          });
-                        }
-                      }}
-                      className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
-                    />
-                    {docs.form02Name ? (
-                      <div className="flex items-center justify-center gap-2 text-emerald-700 text-xs font-bold">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                        <span>{docs.form02Name} ({docs.form02Size})</span>
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
-                        <Upload className="w-4 h-4 text-slate-400" />
-                        <span>Tải lên Bản cam kết Mẫu 02 (tùy chọn)</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 3. TÓM TẮT HỒ SƠ DỰ THI TRƯỚC KHI BẤM NỘP */}
-            <div className="bg-[#F6FBFD] border border-sky-100 rounded-xl p-4 text-xs space-y-2">
-              <span className="font-bold text-[#21469A] uppercase tracking-wider block">
-                Tóm tắt hồ sơ dự thi của bạn:
-              </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700">
-                <div>• Thí sinh: <strong>{author.fullName || '(Chưa điền)'}</strong></div>
-                <div>• CCCD: <strong>{author.idNumber || '(Chưa điền)'}</strong></div>
-                <div>• Điện thoại: <strong>{author.phone || '(Chưa điền)'}</strong></div>
-                <div>• Email: <strong>{author.email || '(Chưa điền)'}</strong></div>
-                <div className="sm:col-span-2">• Tên tác phẩm: <strong className="text-[#21469A]">{product.productTitle || '(Chưa điền)'}</strong></div>
-                <div>• Hạng mục: <strong>{product.category === 'single' ? 'Ảnh đơn' : 'Ảnh bộ'}</strong> ({images.length} ảnh đã tải)</div>
-                <div>• Phiếu Mẫu 01: <strong className={docs.form01Name ? 'text-emerald-700' : 'text-red-600'}>{docs.form01Name || 'Chưa tải lên'}</strong></div>
               </div>
             </div>
 
